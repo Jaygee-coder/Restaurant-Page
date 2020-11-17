@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Rye&family=Six+Caps&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/demo.css" />
+    <link rel="stylesheet" type="text/css" href="css/slicebox.css" />
+    <link rel="stylesheet" type="text/css" href="css/custom.css" />
+    <link rel="stylesheet" href="main.css">
+    <script type="text/javascript" src="js/modernizr.custom.46884.js"></script>   
+</head>
+<body>
+    <div class="content">
+        <div class="tab-pane" id="home-pane">
+            <div class="wrapper">
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                    <ul id="sb-slider" class="sb-slider">
+                        <li>
+                            <a href="" target="_blank"><img src="desserts/crepes.jpg" alt="image1"/></a>
+                            <div class="sb-description">
+                                <h3>Berry Creamy, Berry Crepey</h3>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="" target="_blank"><img src="desserts/caramel.jpg" alt="image1"/></a>
+                            <div class="sb-description">
+                                <h3>Caramel Delight</h3>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="" target="_blank"><img src="desserts/donuts.jpg" alt="image1"/></a>
+                            <div class="sb-description">
+                                <h3>Chocolate Donuts</h3>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="" target="_blank"><img src="maindishes/pizza.jpg" alt="image1"/></a>
+                            <div class="sb-description">
+                                <h3>Hawaiian Pizza</h3>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="" target="_blank"><img src="maindishes/fishcurry.jpg" alt="image1"/></a>
+                            <div class="sb-description">
+                                <h3>Salmon Curry</h3>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="" target="_blank"><img src="maindishes/shrimp.jpg" alt="image1"/></a>
+                            <div class="sb-description">
+                                <h3>Shrimp Skewers</h3>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="" target="_blank"><img src="maindishes/kebab.jpg" alt="image2"/></a>
+                            <div class="sb-description">
+                                <h3>Lamb Kebab</h3>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="" target="_blank"><img src="maindishes/parata.jpg" alt="image1"/></a>
+                            <div class="sb-description">
+                                <h3>Parata and Butternut Soup</h3>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="" target="_blank"><img src="maindishes/pepper.jpg" alt="image1"/></a>
+                            <div class="sb-description">
+                                <h3>Peppery Chicken</h3>
+                            </div>
+                        </li>
+                    </ul>
+    
+                    <div id="shadow" class="shadow"></div>
+    
+                    <div id="nav-arrows" class="nav-arrows">
+                        <a href="#"><i class="fa fa-chevron-circle-right fa-2x" aria-hidden="true"></i></a>
+                        <a href="#"><i class="fa fa-chevron-circle-left fa-2x" aria-hidden="true"></i></a>
+                    </div>
+    
+                    <div id="nav-options" class="nav-options">
+                        <span id="navPlay"><i class="fa fa-play" aria-hidden="true"></i></span>
+                        <span id="navPause"><i class="fa fa-pause" aria-hidden="true"></i></span>
+                    </div> 
+    
+                </div><!-- /wrapper -->
+    
+            </div> 
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/jquery.ScrollMagic.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.js"></script>
+    <script src="index.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="js/jquery.slicebox.js"></script>  
+            <script>
+                $(function() {
+                    
+                    var Page = (function() {
+    
+                        var $navArrows = $( '#nav-arrows' ).hide(),
+                            $navOptions = $( '#nav-options' ).hide(),
+                            $shadow = $( '#shadow' ).hide(),
+                            slicebox = $( '#sb-slider' ).slicebox( {
+                                onReady : function() {
+    
+                                    $navArrows.show();
+                                    $navOptions.show();
+                                    $shadow.show();
+    
+                                },
+                                orientation : 'r',
+                                cuboidsRandom : true,
+                                disperseFactor : 30
+                            } ),
+                            
+                            init = function() {
+    
+                                initEvents();
+                                
+                            },
+                            initEvents = function() {
+    
+                                // add navigation events
+                                $navArrows.children( ':first' ).on( 'click', function() {
+    
+                                    slicebox.next();
+                                    return false;
+    
+                                } );
+    
+                                $navArrows.children( ':last' ).on( 'click', function() {
+                                    
+                                    slicebox.previous();
+                                    return false;
+    
+                                } );
+    
+                                $( '#navPlay' ).on( 'click', function() {
+                                    
+                                    slicebox.play();
+                                    return false;
+    
+                                } );
+    
+                                $( '#navPause' ).on( 'click', function() {
+                                    
+                                    slicebox.pause();
+                                    return false;
+    
+                                } );
+    
+                            };
+    
+                            return { init : init };
+    
+                    })();
+    
+                    Page.init();
+    
+                });
+                function splitScroll(){
+                    const controller = new ScrollMagic.Controller();
+
+                    new ScrollMagic.Scene({
+                        duration: 1000,
+                        triggerElement: '.abouttitle',
+                        triggerHook: 0
+                    })
+                    .setPin('.abouttitle')
+                    .addIndicators()
+                    .addTo(controller)
+                    }
+
+                splitScroll();
+            </script>
+    
+</body>
+</html>

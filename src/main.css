@@ -1,0 +1,304 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+    background-color: rgb(250, 210, 10);
+}
+a {
+    text-decoration: none;
+}
+img {
+    width: 800px;
+    height: 500px;
+}
+.navigationbar {
+   display: flex;
+   height: 60px;
+   width: 100%;
+   align-items: center;
+   justify-content: center;
+   background-color: rgba(0, 0,0, 0.85);
+   padding: 0px;
+   position: fixed;
+   top: 0;
+}
+.navlist {
+    display: inline-block;
+    list-style: none;
+    padding: 20px 30px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 700;
+}
+.navlist:nth-child(2) {
+    margin-left: 400px;
+}
+.navlist a {
+    color:rgb(250, 210, 10);
+}
+.navlist a:hover {
+    color: orangered;
+}
+.navlist:hover {
+    background-color: rgb(250, 210, 10);  
+}
+.navlist .active a {
+    background-color: rgb(250, 210, 10); 
+    color: orangered;
+}
+.tab-pane {
+    display: none;  
+}
+.active {
+    display: block;
+
+}
+.dishes {
+    height: 100vh;
+    width: 100%;
+    display: block;
+    margin: 0 auto;
+}
+.desserts {
+    width: 100%;
+    height: 100vh;
+    display: block;
+    margin: 0 auto;
+}
+.restaurantname h2 {
+    color: rgb(250, 138, 10);
+    position: fixed;
+    top: -15px;
+    left: 0;
+    z-index: 100;
+    font-size: 40px;
+    font-family: 'Rye', cursive;
+}
+.restaurantname i {
+    margin-left: 10px;
+    color: white;
+}
+
+.maindishone{
+   background-color: red;
+   background-image: url(../src/maindishes/shrimp.jpg);
+   background-position: center;
+   background-repeat: no-repeat;
+   background-size: cover;
+   height: 100vh;
+   width: 100%;
+   position: absolute;
+   top: 60px;
+   display: table;
+   background-attachment: fixed;
+}
+.maindishtwo{
+    background-color: red;
+    background-image: url(../src/maindishes/pepper.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    top: 650px;
+    display: table;
+    background-attachment: fixed;
+ }
+ .maindishthree{
+    background-color: red;
+    background-image: url(../src/maindishes/pizza.jpg);
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    top: 650px;
+    display: table;
+    background-attachment: fixed;
+ }
+ .maindishfour{
+    background-color: red;
+    background-image: url(../src/maindishes/soup.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    top: 650px;
+    display: table;
+    background-attachment: fixed;
+ }
+ .maindishfive{
+    background-color: red;
+    background-image: url(../src/maindishes/roast.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    top: 650px;
+    display: table;
+    background-attachment: fixed;
+ }
+.tab-pane h5{
+    color: white;
+}
+/*about pane*/
+.ourProducts {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    text-align: center;
+}
+.ourProducts h5 {
+    font-size: 50px;
+    font-weight: 700;
+}
+#about-pane {
+    position : absolute;
+    top: 60px;
+    background-color: rgba(0, 0,0, 0.9) ;
+    background-image: url(../src/images/spice.jpg);
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.aboutpages {
+   display: flex;
+   height: 300vh;
+}
+.abouttitle {
+    box-sizing: border-box;
+    width: 40%;
+    height: 300vh;
+    background-attachment: fixed;
+    background-color:rgb(143, 15, 15);
+    border-radius: 20px;
+    border-right: 500px solid rgb(143, 15, 15);
+}
+.missionAndVisionWrapper {
+    width: 60%;
+}
+.missionAndVisionWrapper h5 {
+    width: 80%;
+    font-size: 25px;
+}
+.ourmission {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgb(255, 142, 14);
+    font-size: 30px;
+    clip-path: circle(50% at 50% 50%);
+}
+.ourvision {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgb(112, 9, 107);
+    clip-path: circle(50% at 50% 50%);
+}
+.ourhistory {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgb(7, 135, 139);
+    clip-path: circle(50% at 50% 50%);
+}
+/*desserts*/
+.dessertone{
+    background-color: red;
+    background-image: url(../src/desserts/mousse.jpg);
+    background-position: 50% 80%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+    top: 60px;
+    display: table;
+    background-attachment: fixed;
+ }
+ 
+ .desserttwo{
+     background-color: red;
+     background-image: url(../src/desserts/cupcake.jpg);
+     background-position: 50% 65%;
+     background-repeat: no-repeat;
+     background-size: cover;
+     height: 100vh;
+     width: 100%;
+     position: relative;
+     top: 650px;
+     display: table;
+     background-attachment: fixed;
+  }
+  .dessertthree{
+     background-color: red;
+     background-image: url(../src/desserts/pie.jpg);
+     background-position: 50% 60%;
+     background-repeat: no-repeat;
+     background-size: cover;
+     height: 100vh;
+     width: 100%;
+     position: relative;
+     top: 650px;
+     display: table;
+     background-attachment: fixed;
+  }
+  .dessertfour{
+     background-color: red;
+     background-image: url(../src/desserts/waffle.jpg);
+     background-position: 50% 40%;
+     background-repeat: no-repeat;
+     background-size: cover;
+     height: 100vh;
+     width: 100%;
+     position: relative;
+     top: 650px;
+     display: table;
+     background-attachment: fixed;
+  }
+  .dessertfive{
+    background-color: red;
+    background-image: url(../src/desserts/caramel.jpg);
+    background-position: 50% 80%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    top: 650px;
+    display: table;
+    background-attachment: fixed;
+ }
+ #contacts-pane li {
+     list-style: none;
+     margin: 50px;
+ }
+ #contacts-pane {
+     position : absolute;
+     top: 60px;
+     background-color:orange ;
+     width: 100%;
+     height: 100vh;
+ }
+ #contacts-pane h2 {
+     font-size: 40px;
+     color: black;
+   
+ }
+ #contacts-pane h2 i {
+     color: rgb(143, 15, 15);
+ }
